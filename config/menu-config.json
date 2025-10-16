@@ -1,0 +1,22 @@
+{
+  "Menu-1": {
+    "type": "image",
+    "status": "enabled"
+  },
+  "Menu-2": {
+    "type": "pdf",
+    "status": "enabled"
+  },
+  "Menu-3": {
+    "type": "image",
+    "status": "enabled"
+  },
+  "Menu-4": {
+    "type": "pdf",
+    "status": "enabled"
+  },
+  "Menu-5": {
+    "type": "image",
+    "status": "disabled"
+  }
+}
