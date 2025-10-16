@@ -29,8 +29,8 @@
         const ext = fileType === 'pdf' ? 'pdf' : 'jpg';
 
         const redirectUrl = (fileType === 'pdf')
-          ? `https://docs.google.com/gview?embedded=true&url=https://menu-qr.netlify.app/${folder}/${menu}.${ext}`
-          : `https://menu-qr.netlify.app/${folder}/${menu}.${ext}`;
+          ? `https://docs.google.com/gview?embedded=true&url=https://dynamicqrcode.netlify.app/${folder}/${menu}.${ext}`
+          : `https://dynamicqrcode.netlify.app/${folder}/${menu}.${ext}`;
 
         window.location.href = redirectUrl;
       } catch (err) {

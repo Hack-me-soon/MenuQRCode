@@ -24,7 +24,7 @@ function loadMenuUI() {
   const container = document.getElementById("menu-container");
 
   menus.forEach(menu => {
-    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://menu-qr.netlify.app/images/${menu}.jpg`;
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://dynamicqrcode.netlify.app/images/${menu}.jpg`;
     const div = document.createElement("div");
     div.className = "menu-block";
 

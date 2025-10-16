@@ -39,8 +39,8 @@ async function loadMenuUI() {
 
     const filePath =
       type === "pdf"
-        ? `https://menu-qr.netlify.app/pdf/${menu}.pdf`
-        : `https://menu-qr.netlify.app/images/${menu}.jpg`;
+        ? `https://dynamicqrcode.netlify.app/pdf/${menu}.pdf`
+        : `https://dynamicqrcode.netlify.app/images/${menu}.jpg`;
 
     const qrDataUrl =
       type === "pdf"
@@ -48,8 +48,8 @@ async function loadMenuUI() {
         : filePath;
 
     const qrUrl = (type === 'pdf')
-      ? `https://docs.google.com/gview?embedded=true&url=https://menu-qr.netlify.app/pdf/${menu}.pdf`
-      : `https://menu-qr.netlify.app/images/${menu}.jpg`;
+      ? `https://docs.google.com/gview?embedded=true&url=https://dynamicqrcode.netlify.app/pdf/${menu}.pdf`
+      : `https://dynamicqrcode.netlify.app/images/${menu}.jpg`;
 
 
     const div = document.createElement("div");
@@ -167,7 +167,7 @@ function updateMenuUI(menu) {
   const folder = selectedType === "pdf" ? "pdf" : "images";
   const extension = selectedType === "pdf" ? "pdf" : "jpg";
 
-  const qrLink = `https://menu-qr.netlify.app/menu/${menu}`;
+  const qrLink = `https://dynamicqrcode.netlify.app/menu/${menu}`;
   qr.href = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrLink)}`;
 
   if (selectedType === "image") {
@@ -220,7 +220,7 @@ async function uploadFileDirect(menu, file, type) {
 // QR CODE DOWNLOAD
 async function downloadQRCode(menu) {
   try {
-    const qrDataUrl = `https://menu-qr.netlify.app/menu/${menu}`;
+    const qrDataUrl = `https://dynamicqrcode.netlify.app/menu/${menu}`;
     const qrImageUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrDataUrl)}`;
 
     const response = await fetch(qrImageUrl);
@@ -246,16 +246,16 @@ function updateQRCode(menu) {
   let filePath;
 
   if (type === "image") {
-    filePath = `https://menu-qr.netlify.app/images/${menu}.jpg`;
+    filePath = `https://dynamicqrcode.netlify.app/images/${menu}.jpg`;
     document.getElementById(`preview-${menu}`).src = `images/${menu}.jpg`;
     document.getElementById(`preview-${menu}`).style.display = 'block';
   } else {
-    filePath = `https://docs.google.com/gview?embedded=true&url=https://menu-qr.netlify.app/pdf/${menu}.pdf`;
+    filePath = `https://docs.google.com/gview?embedded=true&url=https://dynamicqrcode.netlify.app/pdf/${menu}.pdf`;
     document.getElementById(`preview-${menu}`).style.display = 'none';
   }
 
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(filePath)}`;
-  const qrLink = `https://menu-qr.netlify.app/menu/${menu}`;
+  const qrLink = `https://dynamicqrcode.netlify.app/menu/${menu}`;
   qr.href = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrLink)}`;
 
 }

@@ -76,7 +76,7 @@ MenuQRCode/
 4. Open `index.html` or `menu.html` in browser (or via the local server) to preview.
 
 Repository name should be exactly as given in the Repository (MenuQRCode).
-The website name in which the repository is being published in Netlify should be replaced inside the code instead of (menu-qr).
+The website name in which the repository is being published in Netlify should be replaced inside the code instead of (dynamicqrcode).
 Repo Owner should also be replaced with the exact username as your github username (Hack-me-soon)
 
 ### Deploying
